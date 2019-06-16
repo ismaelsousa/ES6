@@ -1,11 +1,20 @@
-alert("teste")
-
-class Teste{
-    metodo(){
-
+class List{
+    constructor(){
+        this.data = [];
     }
 
-    outro(){
-        
+    add(data){
+        this.data.push(data);
+        console.log(data);
     }
+}
+
+class TodoList extends List{
+  
+}
+
+const minhalista = new TodoList();
+
+document.getElementById("novotodo").onclick = function(){
+    minhalista.add("novo");
 }
